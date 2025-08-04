@@ -18,8 +18,8 @@ app.add_middleware(
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-AMADEUS_API_KEY = "jSFMj7ZCUKPvpImo9G7j7a3BSl8ALwjn"
-AMADEUS_API_SECRET = "NeeGWhFXwAkaOo0r"
+AMADEUS_API_KEY = "AMADEUS_API_KEY"
+AMADEUS_API_SECRET = "AMADEUS_API_SECRET"
 
 access_token = None
 token_expiry = 0
