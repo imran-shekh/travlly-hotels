@@ -1,0 +1,200 @@
+/* Base Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to bottom, #264653, #457b9d 80%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: rgba(34, 34, 34, 0.85);
+    color: #f9c74f;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section */
+.search-form-section {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-form input,
+#search-form select {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    min-width: 140px;
+}
+
+/* Search Button */
+#search-form button {
+    background: #f9c74f;
+    color: #222;
+    font-weight: 600;
+    padding: 9px 22px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.25s;
+}
+
+#search-form button:hover {
+    background: #e9b949;
+}
+
+/* Results Section */
+#results-section {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    min-height: 120px;
+}
+
+#results-section h2 {
+    color: #f9c74f;
+    margin-bottom: 1rem;
+}
+
+/* Train Card Style */
+.train-card {
+    background: rgba(255, 255, 255, 0.11);
+    padding: 1.1rem 0.9rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.11);
+    display: flex;
+    flex-direction: column;
+}
+
+.train-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 7px;
+}
+
+.train-num {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.train-name {
+    font-size: 1rem;
+    color: #f9c74f;
+    font-weight: 500;
+}
+
+.train-details {
+    font-size: 0.98rem;
+    margin-bottom: 7px;
+}
+
+.arrow-symbol {
+    color: #ccc;
+}
+
+.train-duration {
+    color: #6cf;
+}
+
+.train-meta {
+    font-size: 0.93rem;
+    color: #b5b5b5;
+    margin-bottom: 5px;
+}
+
+/* Book Button */
+.book-btn {
+    background: #38b000;
+    color: #fff;
+    padding: 7px 16px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: auto;
+    transition: background 0.2s;
+}
+
+.book-btn:hover {
+    background: #118c36;
+}
+
+.book-btn:disabled {
+    background: #a5d6a7;
+    color: #333;
+    cursor: wait;
+}
+
+.book-btn.booked {
+    background-color: #2196f3 !important;
+}
+
+.book-btn.booking-failed {
+    background-color: #e63946 !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #15223b;
+    padding: 1rem 0;
+    color: #bbb;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+/* Mobile Optimization */
+@media (max-width: 550px) {
+    main {
+        padding: 1rem 4vw;
+    }
+
+    .train-card {
+        padding: 1rem 0.6rem;
+    }
+
+    .search-form-section {
+        padding: 1rem 0.5rem;
+    }
+}

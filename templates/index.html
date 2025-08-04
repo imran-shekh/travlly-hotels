@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Booking App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking App</h1>
+    </header>
+    <main>
+        <section id="search-section mb-2">
+            <form id="search-form">
+                <input type="text" id="city" placeholder="Enter city" required />
+                <button type="submit">Search Hotels</button>
+            </form>
+        </section>
+        <section id="results-section">
+            <h2>Hotels</h2>
+            <div id="results"></div>
+        </section>
+        <section id="booking-section" style="display:none;">
+            <h2>Book Hotel</h2>
+            <form id="booking-form">
+                <input type="hidden" id="hotel_id" name="hotel_id" />
+                <input type="text" id="user_name" name="user_name" placeholder="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" required /> 
+                <button type="submit">Confirm Booking</button>
+            </form>
+            <p id="booking-message"></p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Hotel Booking App | FastAPI Demo
+    </footer>
+    <script src="/static/script.js" defer></script>
+</body>
+</html>
