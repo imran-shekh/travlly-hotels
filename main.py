@@ -1,5 +1,6 @@
 import asyncio
 import traceback
+from dotenv import load_dotenv
 import httpx
 import os
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,8 +19,9 @@ app.add_middleware(
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-AMADEUS_API_KEY = "AMADEUS_API_KEY"
-AMADEUS_API_SECRET = "AMADEUS_API_SECRET"
+load_dotenv()
+AMADEUS_API_KEY = os.getenv("AMADEUS_API_KEY")
+AMADEUS_API_SECRET = os.getenv("AMADEUS_API_SECRET")
 
 access_token = None
 token_expiry = 0
